@@ -7,337 +7,256 @@
 <title>Travel Candy | Video Guide</title>
 
 <style>
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f6fff8;
+    color:#1f2937;
+    line-height:1.6;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f6fff8;
-    color: #1f2937;
-    line-height: 1.65;
+header{
+    background:linear-gradient(135deg,#064e2a,#159447);
+    color:white;
+    text-align:center;
+    padding:30px 15px;
 }
 
-header {
-    background: linear-gradient(135deg, #064e2a, #159447);
-    color: #fff;
-    text-align: center;
-    padding: 42px 18px 38px;
+.badge{
+    display:inline-block;
+    padding:6px 16px;
+    border-radius:25px;
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.3);
+    font-size:12px;
+    font-weight:bold;
 }
 
-.badge {
-    display: inline-block;
-    background: rgba(255,255,255,.15);
-    border: 1px solid rgba(255,255,255,.35);
-    padding: 7px 18px;
-    border-radius: 30px;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 1px;
+header h1{
+    margin:10px 0 5px;
+    font-size:38px;
 }
 
-header h1 {
-    font-size: 46px;
-    margin: 14px 0 8px;
+header p{
+    margin:5px auto;
+    max-width:600px;
+    font-size:17px;
 }
 
-header p {
-    max-width: 750px;
-    margin: 7px auto;
-    font-size: 20px;
+.container{
+    max-width:950px;
+    margin:auto;
+    padding:15px;
 }
 
-.container {
-    max-width: 1050px;
-    margin: auto;
-    padding: 18px;
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    align-items:center;
+    background:white;
+    padding:18px;
+    border-radius:20px;
+    margin-top:-10px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
-.hero {
-    background: #fff;
-    border-radius: 24px;
-    padding: 20px;
-    margin-top: -12px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    align-items: center;
-    box-shadow: 0 8px 28px rgba(0,0,0,.10);
+.hero h2{
+    color:#126b35;
+    font-size:28px;
+    margin-top:0;
 }
 
-.hero img {
-    width: 100%;
-    height: 390px;
-    object-fit: cover;
-    border-radius: 19px;
+.hero p{
+    color:#555;
 }
 
-.hero h2 {
-    color: #126b35;
-    font-size: 31px;
-    margin-top: 0;
+.hero img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:16px;
 }
 
-.english {
-    color: #666;
+.highlight{
+    background:#f0fff3;
+    border-left:4px solid #16a34a;
+    padding:12px;
+    border-radius:8px;
+    font-weight:bold;
 }
 
-.highlight {
-    background: #f0fff3;
-    border-left: 5px solid #16a34a;
-    padding: 15px 17px;
-    border-radius: 10px;
-    margin: 18px 0;
+.offer{
+    text-align:center;
+    background:#fff9ed;
+    border:2px solid #f59e0b;
+    padding:25px 15px;
+    border-radius:20px;
+    margin:20px 0;
 }
 
-.box {
-    background: #fff;
-    padding: 28px;
-    margin: 24px 0;
-    border-radius: 19px;
-    box-shadow: 0 4px 18px rgba(0,0,0,.07);
+.offer-badge{
+    display:inline-block;
+    background:#ea580c;
+    color:white;
+    padding:6px 18px;
+    border-radius:25px;
+    font-weight:bold;
+    font-size:13px;
 }
 
-h2 {
-    color: #126b35;
-    margin-top: 0;
-    font-size: 27px;
+.offer h2{
+    color:#9a3412;
+    margin:12px 0 5px;
 }
 
-.secret {
-    text-align: center;
-    background: linear-gradient(135deg, #f0fff3, #fffdf5);
-    border: 1px solid #d8eadb;
+.old-price{
+    text-decoration:line-through;
+    color:#777;
+    font-size:22px;
 }
 
-.secret strong {
-    color: #126b35;
-    font-size: 20px;
+.price{
+    color:#b45309;
+    font-size:55px;
+    font-weight:bold;
+    line-height:1.1;
 }
 
-.features {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
+.access{
+    font-weight:bold;
+    margin:5px 0;
 }
 
-.feature {
-    text-align: center;
-    background: #f4fff6;
-    border: 1px solid #dcefe0;
-    padding: 20px 10px;
-    border-radius: 15px;
+.buy{
+    display:block;
+    background:#16a34a;
+    color:white;
+    text-decoration:none;
+    padding:17px;
+    border-radius:12px;
+    font-size:20px;
+    font-weight:bold;
+    max-width:450px;
+    margin:18px auto 5px;
 }
 
-.icon {
-    font-size: 37px;
-    margin-bottom: 5px;
+.buy:hover{
+    background:#15803d;
 }
 
-.feature b {
-    display: block;
-    color: #126b35;
-    font-size: 16px;
+.secure{
+    font-size:13px;
+    color:#666;
 }
 
-.feature p {
-    font-size: 14px;
-    margin-bottom: 0;
+.box{
+    background:white;
+    padding:22px;
+    margin:18px 0;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,.06);
 }
 
-.columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+h2{
+    color:#126b35;
+    margin-top:0;
 }
 
-.steps {
-    padding-left: 25px;
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
 }
 
-.steps li {
-    margin: 14px 0;
+.feature{
+    text-align:center;
+    background:#f4fff6;
+    padding:14px 8px;
+    border-radius:12px;
 }
 
-.offer {
-    text-align: center;
-    background: #fff9ed;
-    border: 2px solid #f59e0b;
-    padding: 34px 20px;
+.icon{
+    font-size:30px;
 }
 
-.offer-badge {
-    display: inline-block;
-    background: #ea580c;
-    color: #fff;
-    padding: 7px 24px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: bold;
+.feature b{
+    display:block;
+    color:#126b35;
+    font-size:14px;
 }
 
-.offer h2 {
-    color: #9a3412;
-    margin: 16px 0 4px;
+.feature p{
+    font-size:12px;
+    margin:5px 0 0;
 }
 
-.old-price {
-    color: #777;
-    text-decoration: line-through;
-    font-size: 27px;
-    margin-top: 10px;
+.faq{
+    background:#f8fff9;
+    padding:12px;
+    border-radius:10px;
+    margin:10px 0;
 }
 
-.price {
-    color: #b45309;
-    font-size: 64px;
-    font-weight: bold;
-    line-height: 1.1;
-    margin: 2px 0 8px;
+.notice{
+    background:#eff6ff;
+    border-left:4px solid #2563eb;
 }
 
-.access {
-    font-size: 19px;
-    font-weight: bold;
+.policy{
+    font-size:14px;
+    color:#555;
 }
 
-.buy {
-    display: inline-block;
-    margin-top: 22px;
-    background: #16a34a;
-    color: #fff;
-    text-decoration: none;
-    padding: 16px 42px;
-    border-radius: 13px;
-    font-size: 20px;
-    font-weight: bold;
-    box-shadow: 0 5px 13px rgba(0,0,0,.16);
-}
-
-.buy:hover {
-    background: #15803d;
-}
-
-.secure {
-    color: #666;
-    font-size: 13px;
-    margin-top: 12px;
-}
-
-.faq {
-    background: #f8fff9;
-    border: 1px solid #e1eee3;
-    padding: 16px;
-    border-radius: 12px;
-    margin-bottom: 12px;
-}
-
-.faq b {
-    color: #126b35;
-    font-size: 17px;
-}
-
-.notice {
-    background: #eff6ff;
-    border-left: 5px solid #2563eb;
-}
-
-.policy {
-    background: #fafafa;
-}
-
-footer {
-    background: #064e26;
-    color: white;
-    text-align: center;
-    padding: 27px 15px;
-    margin-top: 30px;
+footer{
+    background:#064e26;
+    color:white;
+    text-align:center;
+    padding:22px 15px;
+    margin-top:20px;
 }
 
 /* MOBILE */
 
-@media(max-width:700px) {
+@media(max-width:700px){
 
-    header {
-        padding: 32px 14px;
+    header{
+        padding:25px 12px;
     }
 
-    header h1 {
-        font-size: 31px;
+    header h1{
+        font-size:30px;
     }
 
-    header p {
-        font-size: 17px;
+    .container{
+        padding:10px;
     }
 
-    .container {
-        padding: 10px;
+    .hero{
+        grid-template-columns:1fr;
     }
 
-    .hero {
-        grid-template-columns: 1fr;
-        padding: 15px;
-        border-radius: 19px;
+    .hero img{
+        height:240px;
     }
 
-    .hero img {
-        height: 260px;
+    .hero h2{
+        font-size:24px;
     }
 
-    .hero h2 {
-        font-size: 25px;
+    .features{
+        grid-template-columns:1fr 1fr;
     }
 
-    .box {
-        padding: 21px;
-        margin: 17px 0;
+    .price{
+        font-size:48px;
     }
 
-    h2 {
-        font-size: 23px;
-    }
-
-    .features {
-        grid-template-columns: 1fr 1fr;
-        gap: 9px;
-    }
-
-    .feature {
-        padding: 15px 7px;
-    }
-
-    .icon {
-        font-size: 30px;
-    }
-
-    .feature b {
-        font-size: 14px;
-    }
-
-    .feature p {
-        font-size: 12px;
-    }
-
-    .columns {
-        grid-template-columns: 1fr;
-    }
-
-    .price {
-        font-size: 50px;
-    }
-
-    .buy {
-        width: 100%;
-        padding: 15px 10px;
-        font-size: 18px;
-    }
 }
-
 </style>
 </head>
 
@@ -345,377 +264,269 @@ footer {
 
 <header>
 
-    <div class="badge">
-        🌿 SPECIAL OFFER • VIDEO GUIDE
-    </div>
+<div class="badge">
+🌿 SPECIAL OFFER • VIDEO GUIDE
+</div>
 
-    <h1>Travel Candy</h1>
+<h1>Travel Candy</h1>
 
-    <p>
-        अपनी खास Travel Candy घर पर बनाना सीखें
-    </p>
+<p>अपनी खास Travel Candy घर पर बनाना सीखें</p>
 
-    <p>
-        Learn how to make a special Travel Candy at home.
-    </p>
+<p>Learn how to make a special Travel Candy at home.</p>
 
 </header>
 
 
 <div class="container">
 
-    <!-- HERO -->
 
-    <section class="hero">
+<!-- HERO -->
 
-        <div>
+<section class="hero">
 
-            <h2>
-                सफर के लिए खास Recipe Video Guide
-            </h2>
+<div>
 
-            <p class="english">
-                A step-by-step video guide to learn a special Travel Candy recipe.
-            </p>
+<h2>सफर के लिए खास Recipe Video Guide</h2>
 
-            <div class="highlight">
-                <strong>
-                    यह एक डिजिटल वीडियो गाइड है जिसमें Travel Candy तैयार करने की पूरी प्रक्रिया step-by-step दिखाई गई है।
-                </strong>
-            </div>
+<p>
+एक आसान Step-by-Step Video Guide जिसमें Travel Candy तैयार करने की प्रक्रिया दिखाई गई है।
+</p>
 
-            <p>
-                वीडियो गाइड देखकर आप घर की kitchen में recipe तैयार करना सीख सकते हैं और अपनी जरूरत के अनुसार पहले से तैयार कर सकते हैं।
-            </p>
+<div class="highlight">
+🎥 घर पर बनाना सीखें • आसान Step-by-Step Video Guide
+</div>
 
-            <p class="english">
-                Learn the complete preparation process through an easy step-by-step video guide.
-            </p>
+</div>
 
-        </div>
 
-        <div>
-            <img
-                src="DEFB9F66-A17A-48F6-A963-2EA8DFD2FBCF.png"
-                alt="Travel Candy Video Guide">
-        </div>
+<div>
 
-    </section>
+<img
+src="DEFB9F66-A17A-48F6-A963-2EA8DFD2FBCF.png"
+alt="Travel Candy Video Guide">
 
+</div>
 
-    <!-- ABOUT -->
+</section>
 
-    <div class="box">
 
-        <h2>❤️ Travel Candy Video Guide</h2>
+<!-- OFFER - EARLY PAYMENT -->
 
-        <p>
-            <strong>
-                यह एक digital educational video guide है जिसमें Travel Candy बनाने की प्रक्रिया step-by-step समझाई गई है।
-            </strong>
-        </p>
+<section class="offer">
 
-        <p class="english">
-            This is a digital educational video guide that explains the Travel Candy preparation process step by step.
-        </p>
+<div class="offer-badge">
+🔥 SPECIAL OFFER
+</div>
 
-        <p>
-            वीडियो में recipe तैयार करने की प्रक्रिया, आवश्यक जानकारी और practical steps बताए जाएंगे।
-        </p>
+<h2>Complete Travel Candy Video Guide</h2>
 
-    </div>
+<p>
+Step-by-Step Video • Complete Guide • Digital Access
+</p>
 
+<div class="old-price">
+₹499
+</div>
 
-    <!-- VIDEO GUIDE -->
+<div class="price">
+₹199
+</div>
 
-    <div class="box secret">
+<div class="access">
+One-Time Payment • Digital Video Access
+</div>
 
-        <h2>🎥 Step-by-Step Video Guide</h2>
+<a
+class="buy"
+href="YOUR_RAZORPAY_PAYMENT_LINK_HERE">
 
-        <p>
-            <strong>
-                पूरी recipe और बनाने की प्रक्रिया वीडियो गाइड के अंदर विस्तार से बताई जाएगी।
-            </strong>
-        </p>
+🔒 अभी ₹199 में खरीदें
 
-        <p class="english">
-            The complete recipe details and preparation process are explained inside the video guide.
-        </p>
+</a>
 
-        <p>
-            Video को अपने मोबाइल पर आसानी से देखा जा सकता है।
-        </p>
+<div class="secure">
+Secure online payment
+</div>
 
-    </div>
+</section>
 
 
-    <!-- FEATURES -->
+<!-- WHAT YOU GET -->
 
-    <div class="box">
+<section class="box">
 
-        <h2>✨ क्या मिलेगा? • What You'll Get</h2>
+<h2>✨ क्या मिलेगा?</h2>
 
-        <div class="features">
+<div class="features">
 
-            <div class="feature">
-                <div class="icon">🎥</div>
-                <b>Step-by-Step Video</b>
-                <p>पूरी प्रक्रिया आसान तरीके से।</p>
-            </div>
+<div class="feature">
+<div class="icon">🎥</div>
+<b>Step-by-Step Video</b>
+<p>पूरी प्रक्रिया आसान तरीके से।</p>
+</div>
 
-            <div class="feature">
-                <div class="icon">📖</div>
-                <b>Complete Guide</b>
-                <p>Recipe preparation की जानकारी।</p>
-            </div>
+<div class="feature">
+<div class="icon">📖</div>
+<b>Complete Guide</b>
+<p>पूरी जानकारी।</p>
+</div>
 
-            <div class="feature">
-                <div class="icon">🏠</div>
-                <b>Make at Home</b>
-                <p>घर की kitchen में सीखें।</p>
-            </div>
+<div class="feature">
+<div class="icon">🏠</div>
+<b>Make at Home</b>
+<p>घर पर सीखें।</p>
+</div>
 
-            <div class="feature">
-                <div class="icon">♾️</div>
-                <b>Lifetime Access</b>
-                <p>एक बार खरीदें, बार-बार देखें।</p>
-            </div>
+<div class="feature">
+<div class="icon">📱</div>
+<b>Mobile Access</b>
+<p>मोबाइल पर देखें।</p>
+</div>
 
-        </div>
+</div>
 
-    </div>
+</section>
 
 
-    <!-- HOW IT WORKS -->
+<!-- HOW IT WORKS -->
 
-    <div class="columns">
+<section class="box">
 
-        <div class="box">
+<h2>📖 कैसे मिलेगा?</h2>
 
-            <h2>📖 कैसे मिलेगा? • How It Works</h2>
+<p>
+<strong>1.</strong> ₹199 का एक बार payment करें
+</p>
 
-            <ol class="steps">
+<p>
+<strong>2.</strong> Payment के बाद digital video access प्राप्त करें
+</p>
 
-                <li>
-                    <strong>₹199 का payment करें</strong><br>
-                    Make a one-time payment.
-                </li>
+<p>
+<strong>3.</strong> Video देखें और घर पर प्रक्रिया सीखें
+</p>
 
-                <li>
-                    <strong>Video Access पाएं</strong><br>
-                    Payment के बाद दिए गए तरीके से digital content access करें।
-                </li>
+</section>
 
-                <li>
-                    <strong>देखें और सीखें</strong><br>
-                    Watch the guide at your convenience.
-                </li>
 
-                <li>
-                    <strong>घर पर तैयार करना सीखें</strong><br>
-                    Follow the steps shown in the video.
-                </li>
+<!-- FAQ -->
 
-            </ol>
+<section class="box">
 
-        </div>
+<h2>❓ अक्सर पूछे जाने वाले सवाल</h2>
 
+<div class="faq">
 
-        <div class="box">
+<b>क्या यह physical product है?</b>
 
-            <h2>🚌 Travel Candy सीखें</h2>
+<p>
+नहीं। यह Travel Candy बनाने से संबंधित एक digital video guide है।
+</p>
 
-            <p>
-                Video guide में Travel Candy बनाने की प्रक्रिया आसान steps में समझाई गई है।
-            </p>
+</div>
 
-            <p class="english">
-                The video guide explains the preparation process in simple and easy-to-follow steps.
-            </p>
 
-        </div>
+<div class="faq">
 
-    </div>
+<b>क्या Video मोबाइल पर देख सकते हैं?</b>
 
+<p>
+हाँ। Video guide मोबाइल पर देखा जा सकता है।
+</p>
 
-    <!-- OFFER -->
+</div>
 
-    <div class="box offer">
 
-        <div class="offer-badge">
-            🔥 SPECIAL OFFER
-        </div>
+<div class="faq">
 
-        <h2>
-            Complete Travel Candy Video Guide
-        </h2>
+<b>Payment के बाद क्या मिलेगा?</b>
 
-        <p>
-            Step-by-Step Video • Complete Guide • Digital Access
-        </p>
+<p>
+Travel Candy Video Guide का digital access मिलेगा।
+</p>
 
-        <div class="old-price">
-            ₹499
-        </div>
+</div>
 
-        <div class="price">
-            ₹199
-        </div>
+</section>
 
-        <div class="access">
-            One-Time Payment • Digital Video Access
-        </div>
 
-        <!-- Razorpay link baad me yahan add karein -->
+<!-- NOTICE -->
 
-        <a
-            class="buy"
-            href="YOUR_RAZORPAY_PAYMENT_LINK_HERE">
+<section class="box notice">
 
-            🔒 अभी ₹199 में खरीदें
+<h2>⚠️ जरूरी सूचना</h2>
 
-        </a>
+<p>
+यह website केवल एक digital educational video guide प्रदान करती है।
+यह कोई medical treatment, medicine या healthcare service नहीं है।
+</p>
 
-        <div class="secure">
-            Secure online payment
-        </div>
+</section>
 
-    </div>
 
+<!-- POLICIES -->
 
-    <!-- FAQ -->
+<section class="box policy">
 
-    <div class="box">
+<h2>Refund & Cancellation Policy</h2>
 
-        <h2>❓ FAQ • अक्सर पूछे जाने वाले सवाल</h2>
+<p>
+This product is a digital video guide. Once digital content has been delivered or accessed, refunds may not be available, except where required by applicable law.
+</p>
 
-        <div class="faq">
-            <b>क्या यह video मोबाइल पर देख सकते हैं?</b>
-            <p>हाँ। Video guide को मोबाइल पर देखा जा सकता है।</p>
-        </div>
+<h2>Privacy Policy</h2>
 
-        <div class="faq">
-            <b>क्या यह एक physical product है?</b>
-            <p>नहीं। यह Travel Candy बनाने से संबंधित एक digital video guide है।</p>
-        </div>
+<p>
+आपकी जानकारी का उपयोग केवल payment, customer support और digital content access के लिए किया जाता है।
+</p>
 
-        <div class="faq">
-            <b>क्या इसे घर पर सीख सकते हैं?</b>
-            <p>हाँ। Video guide में घर पर recipe preparation की प्रक्रिया समझाई गई है।</p>
-        </div>
+<h2>Terms & Conditions</h2>
 
-        <div class="faq">
-            <b>Payment करने के बाद क्या मिलेगा?</b>
-            <p>आपको Travel Candy Video Guide का digital access मिलेगा।</p>
-        </div>
+<p>
+Travel Candy Video Guide एक digital educational product है और व्यक्तिगत learning purposes के लिए उपलब्ध कराया जाता है।
+</p>
 
-    </div>
+</section>
 
 
-    <!-- IMPORTANT NOTICE -->
+<!-- CONTACT -->
 
-    <div class="box notice">
+<section class="box">
 
-        <h2>⚠️ जरूरी सूचना • Important Notice</h2>
+<h2>📩 Contact & Support</h2>
 
-        <p>
-            यह website एक digital educational video guide प्रदान करती है।
-            यह कोई medical treatment, medicine या healthcare service नहीं है।
-        </p>
+<p>
+Product या payment से संबंधित सहायता के लिए संपर्क करें:
+</p>
 
-        <p class="english">
-            This website provides a digital educational video guide only.
-            It does not provide medical treatment, medicine or healthcare services.
-        </p>
+<p>
+<strong>Email:</strong> momo117verma@gmail.com
+</p>
 
-    </div>
+<p>
+<strong>Business:</strong> Travel Candy
+</p>
 
+</section>
 
-    <!-- REFUND POLICY -->
-
-    <div class="box policy">
-
-        <h2>Refund & Cancellation Policy</h2>
-
-        <p>
-            This product is a digital video guide. Due to the nature of digital content,
-            once the content has been delivered or accessed, refunds may not be available,
-            except where required by applicable law.
-        </p>
-
-        <p>
-            कृपया payment करने से पहले product description और उपलब्ध जानकारी ध्यान से पढ़ें।
-        </p>
-
-    </div>
-
-
-    <!-- PRIVACY POLICY -->
-
-    <div class="box policy">
-
-        <h2>Privacy Policy</h2>
-
-        <p>
-            हम आपके द्वारा प्रदान की गई जानकारी का उपयोग केवल payment,
-            customer support और digital content access से संबंधित उद्देश्यों के लिए करते हैं।
-        </p>
-
-    </div>
-
-
-    <!-- TERMS -->
-
-    <div class="box policy">
-
-        <h2>Terms & Conditions</h2>
-
-        <p>
-            Travel Candy Video Guide एक digital educational product है।
-            इसका content व्यक्तिगत उपयोग और learning purposes के लिए उपलब्ध कराया जाता है।
-        </p>
-
-    </div>
-
-
-    <!-- CONTACT -->
-
-    <div class="box">
-
-        <h2>📩 Contact & Support</h2>
-
-        <p>
-            Product या payment से संबंधित सहायता के लिए आप हमसे संपर्क कर सकते हैं।
-        </p>
-
-        <p>
-            <strong>Email:</strong>
-            momo117verma@gmail.com
-        </p>
-
-        <p>
-            <strong>Business:</strong>
-            Travel Candy
-        </p>
-
-    </div>
 
 </div>
 
 
 <footer>
 
-    <strong>🌿 Travel Candy</strong>
+<strong>🌿 Travel Candy</strong>
 
-    <br>
+<br>
 
-    Digital Video Guide for Learning
+Digital Video Guide for Learning
 
-    <br><br>
+<br><br>
 
-    © 2026 Travel Candy
+© 2026 Travel Candy
 
 </footer>
+
 
 </body>
 </html>
